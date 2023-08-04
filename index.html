@@ -16,7 +16,7 @@
 <body>
     <!-- here gos html code -->
 
-    <div class="container">
+    <div class="container" id="cv-form">
         <h1 class="text-center my-2">Resume Generator</h1>
         <p class="text-center">Learncode with chinu</p>
 
@@ -64,12 +64,12 @@
 
                 <div class="form-group mt-2">
                     <label for="">objective</label>
-                    <textarea class="form-control" id="" cols="" rows="4"></textarea>
+                    <textarea class="form-control" id="objectiveField" cols="" rows="4"></textarea>
                 </div>
 
                 <div class="form-group mt-2" id="we">
                     <label for="">work exprience</label>
-                    <textarea class="form-control wefield" id="" cols="" rows="3"></textarea>
+                    <textarea class="form-control wefield" cols="" rows="3"></textarea>
 
                     <!-- new textarea  -->
 
@@ -79,7 +79,8 @@
                 </div>
                 <div class="form-group mt-2" id="aq">
                     <label for="">Academic qualification</label>
-                    <textarea class="form-control eqfield" id="" cols="" rows="3"></textarea>
+                    <textarea placeholder="Enter here" class="form-control eqfield" id="eqField" cols=""
+                        rows="3"></textarea>
 
                     <div class="container text-center mt-2" id="aqaddbutton">
                         <button onclick="addNewAQfield()" class="btn btn-primary btn-sm">Add</button>
@@ -89,9 +90,97 @@
         </div>
 
         <div class="container text-center mt-2">
-            <button class="btn btn-primary btn-lg">Generate cv</button>
+            <button onclick="generateCV()" class="btn btn-primary btn-lg">Generate cv</button>
         </div>
     </div>
+    <!-- cv template -->
+
+    <div class="container" id="cv-template">
+        <div class="row">
+            <div class="col-md-4 text-center py-5 background">
+                <!-- this is first column -->
+                <img src="https://campussafetyconference.com/wp-content/uploads/2020/08/iStock-476085198.jpg" alt=""
+                    class="img-fluid myimg">
+
+                <div class="container">
+                    <p id="nameT1">PRIYANSH SONI</p>
+                    <p id="contactT">9981887858</p>
+                    <p id="addressT">silicon city rau indore 460001</p>
+
+                    <hr>
+                    <p>
+                        <a id="fbT" href="#1">https:/www.google.com/w3school</a>
+                    </p>
+                    <p>
+                        <a id="instaT" href="#1">https:/www.google.com/w3school</a>
+                    </p>
+                    <p>
+                        <a id="linkdinT" href="#1">https:/www.google.com/w3school</a>
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="col-md-8 py-5">
+                <!-- this is second coloum -->
+                <h1 id="nameT2" class="text-center" style="font-weight: 980;">Priyansh soni</h1>
+
+                <!-- objctive card -->
+                <div class="card mt-4">
+                    <div class="card-header background">
+                        <h3>Objective</h3>
+                    </div>
+                    <div class="card-body">
+                        <p id="objectiveT">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore tenetur
+                            dolorum mollitia
+                            quisquam unde, quam id eos. Eaque at modi quas, enim veniam, excepturi dicta perferendis
+                            possimus quam inventore similique?</p>
+                    </div>
+                </div>
+
+                <!-- work exprience -->
+                <div class="card mt-4">
+                    <div class="card-header background">
+                        <h3>Work exprience</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul id="weT">
+                            <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit, doloribus?</li>
+
+
+                            <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit, doloribus?</li>
+
+
+                            <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit, doloribus?</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- academic qualifications -->
+
+                <div class="card mt-4">
+                    <div class="card-header background">
+                        <h3>Academic Qualification</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul id="aqT">
+                            <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit, doloribus?</li>
+
+
+                            <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit, doloribus?</li>
+
+
+                            <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit, doloribus?</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="container mt-3 text-center">
+                    <button onclick="printCV()" class="btn background">Print CV</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
         integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
         crossorigin="anonymous"></script>
